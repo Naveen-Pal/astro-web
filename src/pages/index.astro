@@ -1,7 +1,89 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Home Page";
+const pageTitle = "Naveen Pal";
 ---
 <BaseLayout pageTitle = {pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+  <div class="hello">
+    <span id="hello_w"><b>Hello World!</b></span>
+    <br>
+    <span class="thisis">(This is what we all begin with*)</span>
+  </div>
+
+  </div>
+  <main>
+    <div class="container">
+      <section class="welcome">
+        <div class="greeting-message">
+          <h1 class="greeting"></h1>
+          <p><b>Welcome,</b> to my little corner on the <span class="highlight">Internet</span> 🌐.</p>
+        </div>
+      </section>
+      <section class="info">
+
+        <section class="about">
+          <div class="about-content">
+            <!-- <h2>Who Am I?</h2> -->
+            <p>I am Naveen Pal, studying Computer Science Engineering at IIT Gandhinagar 😊.</p>
+            <!-- <h2>More About Me</h2> -->
+            <p>I love learning about all facinating things in tech. My interests lie in Automation, Cybersecurity, and
+              App Development 🚀.</p>
+            <!-- <h2>About This Website</h2> -->
+            <p>I created this website to showcase my projects and blog, all in one place. At the bottom-right, you'll
+              find my to-do list ✍️.</p>
+            <p>For any conversation fell free to contact me, send "hi" me on my whatsapp number📱 +91 7415233022 or send
+              me a mail on 23110216@iitgn.ac.in✉️ </p>
+          </div>
+        </section>
+        <section class="pic">
+          <div class="profile-image">
+            <img src="../../myimg.jpg" alt="Naveen Pal">
+          </div>
+        </section>
+
+      </section>
+
+    </div>
+
+    <div class="task" id="id1">
+      <div class='task-data'>
+        <form class="form">
+          <input type="text" class="input" placeholder="Enter your task" autocomplete="on" />
+          <ul class="list">
+
+          </ul>
+        </form>
+      </div>
+      <div id="task-container">
+        <i class="fa fa-tasks" aria-hidden="false"></i>
+      </div>
+    </div>
+  </main>
+  <style>
+    
+.hello{
+  text-align: center;
+  margin: 10px;
+}
+#hello_w{
+  font-size: 3rem;
+}
+.thisis{
+  position: relative;
+  bottom: 10px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 30px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+  </style>
 </BaseLayout>
