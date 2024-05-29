@@ -1,28 +1,20 @@
 ---
-
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import BlogPost from '../../components/BlogPost.astro';
 
-// Import necessary types from Astro
-import type { GetStaticPaths } from 'astro';
+export async function getStaticPaths() {
+  const allPosts = await Astro.glob('../posts/*.md');
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  // Use import.meta.glob to load markdown files
-  const allPosts = import.meta.glob('../posts/*.md', { eager: true });
+  const uniqueTags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
 
-  const posts = Object.values(allPosts) as Array<{ frontmatter: { tags: string[] }, url: string }>;
-  const uniqueTags = [...new Set(posts.map((post) => post.frontmatter.tags).flat())];
-
-  return {
-    paths: uniqueTags.map((tag) => {
-      const filteredPosts = posts.filter((post) => post.frontmatter.tags.includes(tag));
-      return {
-        params: { tag },
-        props: { posts: filteredPosts },
-      };
-    })
-  };
-};
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) => post.frontmatter.tags.includes(tag));
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
@@ -30,8 +22,6 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle={tag}>
   <p>Posts tagged with {tag}</p>
   <ul>
-    {posts.map((post) => (
-      <BlogPost url={post.url} title={post.frontmatter.title} />
-    ))}
+    {posts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title}/>)}
   </ul>
 </BaseLayout>
