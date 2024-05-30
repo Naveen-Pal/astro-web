@@ -1,0 +1,68 @@
+---
+import '../styles/global.css';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'Drum Kit',
+    description: 'Description for project one.',
+    image: '/drumkit.png',
+    link: 'https://naveen-pal.github.io/Drum-kit/',
+  },
+  {
+    title: 'Clock',
+    description: 'Description for project two.',
+    image: '/clock.png',
+    link: 'https://naveen-pal.github.io/clock/',
+  },
+  {
+    title: 'Time Table',
+    description: 'Description for project three.',
+    image: '/timetable.png',
+    link: 'https://naveen-pal.github.io/timetable_2sem/',
+  },
+  {
+    title: 'Project Three',
+    description: 'Description for project three.',
+    image: '/project-one.png',
+    link: 'https://naveen-pal.github.io/Drum-kit/',
+  },
+  {
+    title: 'Project Three',
+    description: 'Description for project three.',
+    image: '/project-one.png',
+    link: 'https://naveen-pal.github.io/Drum-kit/',
+  },
+];
+---
+
+<BaseLayout>
+    <div class="page-top">
+        <h1>My Projects</h1>
+    </div>
+    <main class="projects-page">
+        <section class="projects-grid">
+            {projects.map((project) => (
+                <ProjectCard 
+                title={project.title} 
+                description={project.description} 
+                image={project.image} 
+                link={project.link} 
+                />
+            ))}
+  </section>
+</main>
+</BaseLayout>
+
+<style>
+    .projects-page {
+        padding: 3rem;
+    }
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+</style>

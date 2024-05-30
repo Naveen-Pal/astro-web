@@ -1,7 +1,8 @@
 ---
-title: My Third Blog Post
+layout: ../../layouts/MarkdownPostLayout.astro
+title: My NDA SSB
 author: Astro Learner
-description: "I had some challenges, but asking in the community really helped!"
+description: "IIT vs NDA, Do I want to get into NDA over IIT? My whole NDA journey written exam to SSB experience"
 image:
     url: "https://docs.astro.build/assets/rays.webp"
     alt: "Thumbnail of Astro rays."
