@@ -6,6 +6,10 @@ body {
 }
 .page-top{
   text-align: center;
+  margin: 10px;
+}
+.page-top h1{
+  font-size: 50px;
 }
 a {
   text-decoration: none;

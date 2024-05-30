@@ -3,10 +3,10 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Naveen Pal";
 ---
 <BaseLayout pageTitle = {pageTitle}>
-  <div class="hello">
-    <span id="hello_w"><b>Hello World!</b></span>
-    <br>
-    <span class="thisis">(This is what we all begin with*)</span>
+  <div class="page-top">
+    <span><h1>Hello World</h1></span>
+    <!-- <span id="hello_w"><b>Hello World!</b></span> -->
+    <span class="thisis"><p>(This is what we all begin with*)</p></span>
   </div>
 
   </div>
@@ -60,16 +60,12 @@ const pageTitle = "Naveen Pal";
   </main>
   <style>
     
-.hello{
-  text-align: center;
-  margin: 10px;
-}
 #hello_w{
   font-size: 3rem;
 }
 .thisis{
   position: relative;
-  bottom: 10px;
+  bottom: 40px;
 }
 
 .container {
