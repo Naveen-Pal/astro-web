@@ -3,13 +3,6 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 const pageTitle = "About Me";
 
-const identity = {
-    firstName: "Naveen",
-    country: "India",
-    occupation: "App Developer",
-    hobbies: ["swimming", "skateboarding", "football"],
-};
-
 const skills = [
     "HTML",
     "CSS",
@@ -80,29 +73,15 @@ const skills = [
         </div>
 
         <p class="intro">
-            I am working through Astro's introductory tutorial. This is the
-            second page on my website, and it's the first one I built myself!
+            Hi there, I am Naveen Pal, Junior Undergraduade at IIT Gandhinagar. You may find me roaming on the IIT Gandhinagar streats. Feel free to talk me with lemon soda (first treat form my side😉 )
         </p>
 
         <p class="intro">
-            This site will update as I complete more of the tutorial, so keep
-            checking back and see how my journey is going!
+            I like to dive down the ocean of Technology. To know about my project check out my <a href="https://github.com/Naveen-Pal">github</a>  or visit <a href="/projects">Project page</a>
+            My current PORs are <b>Amalthea Tech Team Member</b>, <b>Blithchrom Tech Team Member</b>, <b>System Programming Member</b>.
         </p>
 
-        <p>Here are a few facts about me:</p>
-        <ul>
-            <li>My name is {identity.firstName}.</li>
-            <li>
-                I live in {identity.country} and I work as a {identity.occupation}.
-            </li>
-            {identity.hobbies.length >= 2 && (
-                <li>
-                    Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-                </li>
-            )}
-        </ul>
-
-        <p>My skills are:</p>
+        <p>Here are my few skills</p>
         <div class="skills-container">
             {skills.map((skill) => <div class="skill">{skill}</div>)}
         </div>

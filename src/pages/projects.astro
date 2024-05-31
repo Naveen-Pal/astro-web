@@ -4,39 +4,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 import ProjectCard from '../components/ProjectCard.astro';
 
-// const projects = await Astro.glob('../pages/projects/*.md');
-const projects = [
-  {
-    title: 'Drum Kit',
-    description: 'Description for project one.',
-    image: '/drumkit.png',
-    link: 'https://naveen-pal.github.io/Drum-kit/',
-  },
-  {
-    title: 'Clock',
-    description: 'Description for project two.',
-    image: '/clock.png',
-    link: 'https://naveen-pal.github.io/clock/',
-  },
-  {
-    title: 'Time Table',
-    description: 'Description for project three.',
-    image: '/timetable.png',
-    link: 'https://naveen-pal.github.io/timetable_2sem/',
-  },
-  {
-    title: 'Issue Tracker',
-    description: 'Description for project three.',
-    image: '/issuetracker.png',
-    link: 'https://github.com/Naveen-Pal/issue-tracker',
-  },
-  {
-    title: 'Project Three',
-    description: 'Description for project three.',
-    image: '/project-one.png',
-    link: 'https://naveen-pal.github.io/Drum-kit/',
-  },
-];
+const projects = await Astro.glob('../pages/projects/*.md');
 ---
 
 <BaseLayout>
@@ -47,10 +15,10 @@ const projects = [
         <section class="projects-grid">
             {projects.map((project) => (
                 <ProjectCard 
-                title={project.title} 
-                description={project.description} 
-                image={project.image} 
-                link={project.link} 
+                title={project.frontmatter.title} 
+                description={project.frontmatter.description} 
+                image={project.frontmatter.image} 
+                link={project.frontmatter.link} 
                 />
             ))}
   </section>
