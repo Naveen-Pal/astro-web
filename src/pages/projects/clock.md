@@ -1,11 +1,9 @@
 ---
 layout: ../../layouts/ProjectLayout.astro
-layout: ../../layouts/ProjectLayout.astro
 title: 'Clock'
 description: 'Description for project two.'
 image: '/clock.png'
 link: 'https://naveen-pal.github.io/clock/'
-github: 'https://github.com/naveen-pal/clock'
 github: 'https://github.com/naveen-pal/clock'
 ---
 
