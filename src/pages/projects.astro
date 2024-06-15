@@ -15,7 +15,7 @@ const projects = await Astro.glob('../pages/projects/*.md');
         <section class="projects-grid">
             {projects.map((project) => (
                 <ProjectCard 
-                url={project.url}
+                url={project.url as string}
                 title={project.frontmatter.title} 
                 description={project.frontmatter.description} 
                 image={project.frontmatter.image} 
