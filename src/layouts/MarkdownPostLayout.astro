@@ -1,39 +1,42 @@
 ---
+// Import the base layout component
 import BaseLayout from "./BaseLayout.astro";
 
-const {frontmatter} = Astro.props;
+// Destructure frontmatter from Astro props
+const { frontmatter } = Astro.props;
 ---
 
 <BaseLayout>
-<h1>{frontmatter.title}</h1>
-<p>Author: {frontmatter.author}</p>
-<p><em>{frontmatter.description}</em></p>
-<!-- <p>{frontmatter.description}</p> -->
-<p>{frontmatter.pubDate.toString().slice(0,10)}</p>
-
-<div class="tags">
-
-  {frontmatter.tags.map((tag: string) => (<p class="tag"><a href={`/tags/${tag}`}>{tag}</a></p>
-    ))}
+  <div class="blog-box">
+    <div class="blog-content">
+      <h1>{frontmatter.title}</h1>
+      <p>{frontmatter.description}</p>
+      <p>Published on: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+      <slot/>
+    </div>
   </div>
-</div>
-<slot/>
 </BaseLayout>
+
 <style>
-    a {
-      color: #00539F;
-    }
+  .blog-box {
+    display: flex;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+  }
   
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  
-    .tag {
-      margin: 0.25em;
-      border: dotted 1px #a1a1a1;
-      border-radius: .5em;
-      padding: .5em 1em;
-      font-size: 1.15em;
-      background-color: #F8FCFD;
-    }
+  .blog-image {
+    max-width: 150px;
+    margin-right: 20px;
+    border-radius: 8px;
+    object-fit: contain;
+  }
+
+  .blog-content {
+    flex: 1;
+  }
+</style>

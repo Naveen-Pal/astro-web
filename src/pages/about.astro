@@ -4,18 +4,15 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About Me";
 
 const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
     "Networking",
     "Cybersecurity",
     "Ethical Hacking",
     "Competitive Programming",
-    "Astro",
+    "Web Developement",
     "Python",
 ];
----
 
+---
 <BaseLayout pageTitle={pageTitle}>
     <style>
         .container {
@@ -73,15 +70,14 @@ const skills = [
         </div>
 
         <p class="intro">
-            Hi there, I am Naveen Pal, Junior Undergraduade at IIT Gandhinagar. You may find me roaming on the IIT Gandhinagar streats. Feel free to talk me with lemon soda (first treat form my side😉 )
+            Welcome! Mesmerized by the boundless realms of technology, I’m Naveen Pal, a Junior Undergraduate at IIT Gandhinagar. You might spot me wandering the streets of IIT Gandhinagar; don’t hesitate to join me over a refreshing lemon soda—my treat for the first round!
         </p>
 
         <p class="intro">
-            I like to dive down the ocean of Technology. To know about my project check out my <a href="https://github.com/Naveen-Pal">github</a>  or visit <a href="/projects">Project page</a>
-            My current PORs are <b>Amalthea Tech Team Member</b>, <b>Blithchrom Tech Team Member</b>, <b>System Programming Member</b>.
+            Deep diving into tech innovations is my passion. To explore my projects, check out my <a href="https://github.com/Naveen-Pal">GitHub</a> or visit my <a href="/projects">Project page</a>. Currently, I am actively involved as a member of the Amalthea Tech Team, the Blithchrom Tech Team, and a System Programming group.
         </p>
 
-        <p>Here are my few skills</p>
+        <p>Here's a snapshot of my technical skills:</p>
         <div class="skills-container">
             {skills.map((skill) => <div class="skill">{skill}</div>)}
         </div>
