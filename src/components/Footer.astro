@@ -1,35 +1,53 @@
----
-import Social from './Social.astro';
----
+
 <style>
   footer {
+    background: #1a1a1a;
+    color: #f5f5f5;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    clear: both;
+  }
+
+  .footer-content {
+    margin-bottom: 1rem;
+  }
+
+  .social {
     display: flex;
     gap: 1rem;
-    /* margin-top: 2rem; */
   }
+
+  .social a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-size: 24px; /* Adjust icon size as needed */
+    transition: color 0.3s ease;
+  }
+
+  .social a:hover {
+    color: #e91e63;
+  }
+
 </style>
 
 <footer>
-  <div class="foot-contant">
-    <p>Copyright &copy; 2024 Naveen Pal. All rights reserved.</p>
-    <p>Website is not completed yet</p>
+  <div class="footer-content">
+    <p>&copy; 2024 Naveen Pal</p>
   </div>
-  <!-- <p>Find more about me on my social media platform: </p> -->
   <div class="social">
-    <Social platform="Linkedin" username="in/naveenpal-" />
-    <Social platform="Github" username="Naveen-Pal" />
-    <Social platform="X" username="Naveen_Pal_" />
-    <Social platform="Hackerrank" username="Naveen__Pal" />
+    <a href="https://linkedin.com/in/naveenpal-" aria-label="LinkedIn">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Naveen-Pal" aria-label="GitHub">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://Hackerrank.com/Naveen__Pal" aria-label="HackerRank">
+      <i class="fab fa-hackerrank"></i>
+    </a>
   </div>
 </footer>
-<style>
-  footer {
-  background: #1a1a1a;
-  color: #f5f5f5;
-  text-align: center;
-  padding: 10px 0;
-  clear: both;
-  justify-content: space-evenly;
-  }
 
-</style>

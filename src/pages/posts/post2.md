@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: My NDA SSB
-author: Astro Learner
-description: "IIT vs NDA, Do I want to get into NDA over IIT? My whole NDA journey written exam to SSB experience"
+author: Naveen Pal
+description: "My whole NDA-SSB experience"
 pubDate: 2022-07-15
 ---
 
