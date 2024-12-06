@@ -1,7 +1,7 @@
 ---
 title: 'Drum Kit'
 description: 'Drumkit made for Javascripy30'
-image: '/drumkit.png'
+image: '/project/drumkit.png'
 link: 'https://naveen-pal.github.io/Drum-kit/'
 github: 'https://github.com/naveen-pal/Drum-kit'
 layout: ../../layouts/ProjectLayout.astro

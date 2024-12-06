@@ -1,7 +1,7 @@
 ---
 title: 'Tico(A Git Clone)'
 description: 'Tico is clone of git (command line) made for WOC 2.0 '
-image: '/git.png'
+image: '/project/git.png'
 link: 'https://naveen-pal.github.io/Drum-kit/'
 github: 'https://github.com/naveen-pal/clock'
 layout: ../../layouts/ProjectLayout.astro
